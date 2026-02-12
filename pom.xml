@@ -12,6 +12,7 @@
     
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
+        <sonar.host.url>http://34.201.145.6:9000/</sonar.host.url>
         <maven.compiler.target>17</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,6 +32,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+		 <snapshotRepository>
+		    <id>nexusRepo</id>
+		    <url>http://35.78.245.174:8081/repository/sample-snapshots/</url>
+		 </snapshotRepository>
+		
+		<repository>
+		    <id>nexusRepo</id>
+		    <url>http://35.78.245.174:8081/repository/sample-releases/</url>
+		</repository>
+    </distributionManagement>
 
     <build>
         <finalName>myweb</finalName>
